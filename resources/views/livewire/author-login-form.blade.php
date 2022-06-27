@@ -10,10 +10,10 @@
         <div class="card-body">
           <h2 class="card-title text-center mb-4">Ingresa a su cuenta</h2>
           <div class="mb-3">
-            <label class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" placeholder="Ingresa email" wire:model="email" >
-            @error('email')
-                <span class="text-danger">{{ $message }}</span>
+            <label class="form-label">Ingresa usuario y/o correo</label>
+            <input type="text" class="form-control" placeholder="Ingresa usuario / email" wire:model="login_id" >
+            @error('login_id')
+                <strong><span class="text-danger">{{ $message }}</span></strong>
             @enderror
           </div>
           <div class="mb-2">
@@ -32,7 +32,7 @@
               </span>
             </div>
             @error('password')
-                <span class="text-danger">{{$message}}</span>
+                <strong><span class="text-danger">{{$message}}</span></strong>
             @enderror
           </div>
           <div class="mb-2">
